@@ -1,38 +1,232 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
+  <head>
+    <meta charset="UTF-8" />
     <title>Empty Template</title>
-</head>
-<body>
-    <a href="#image">Empty</a>
-    <h1>Header 1</h1>
-    <h2>Header 2</h2>
+  </head>
+  <body>
+    <main>
+      <a href="#image">Page-local routing with id in Main-Tag</a>
+      <article>
+        <header>
+          <h1>H1-Tag in Article --> header</h1>
+        </header>
+        <h2>2 in article</h2>
+        <hr />
+        <p data-src="https://loremipsum.de/">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+          takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+        <footer>
+          <p>article --> footer</p>
+          <ol>
+            <li>Do the first thing</li>
+            <li>Do the second thing</li>
+            <li>Do the third thing</li>
+          </ol>
+        </footer>
+      </article>
+    </main>
+
     <h3>Header 3</h3>
     <h4>Header 4</h4>
     <h5>Header 5</h5>
     <h6>Header 6</h6>
-    <hr />
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    <ol>
-        <li>Do the first thing</li>
-        <li>Do the second thing</li>
-        <li>Do the third thing</li>
-    </ol>
     <ul>
-        <li>Pizza</li>
-        <li>Pasta</li>
-        <li>Fish & Chips</li>
+      <li>Pizza</li>
+      <li>Pasta</li>
+      <li>Fish & Chips</li>
     </ul>
     <dl>
-        <dt>Firefox</dt>
-            <dd>A free, open source, cross-platform, graphical web browser
-                developed by the Mozilla Corporation and hundreds of volunteers.</dd>
+      <dt>Firefox</dt>
+      <dd>
+        A free, open source, cross-platform, graphical web browser developed by
+        the Mozilla Corporation and hundreds of volunteers.
+      </dd>
     </dl>
     <a href="https://gaebster.ch" target="_blank">Gaebster Web Page</a>
     <br />
     <a href="_EmptyTemplate.html" target="_blank">Empty</a>
     <br />
-    <img id="image" src="https://wac-cdn.atlassian.com/dam/jcr:389059a7-214c-46a3-bc52-7781b4730301/hero.svg?cdnVersion=kw" alt="html 5" title="HTML 5" />
-</body>
+    <h2>Normaler img-Tag:</h2>
+    <img
+      src="https://wac-cdn.atlassian.com/dam/jcr:389059a7-214c-46a3-bc52-7781b4730301/hero.svg?cdnVersion=kw"
+      alt="html 5"
+      title="HTML 5"
+    />
+    <h2>Picture-Tag</h2>
+    <picture id="image">
+      <source
+        media="(min-width: 1199px)"
+        srcset="https://via.placeholder.com/1199x150"
+      />
+      <source
+        media="(min-width: 720px)"
+        srcset="https://via.placeholder.com/720x150"
+      />
+      <img src="https://via.placeholder.com/150x150" alt="placeholder" />
+    </picture>
+    
+    <h2>Task</h2>
+    <picture>
+    <source media="(min-width: 1199px)" srcset="https://via.placeholder.com/1199x150">
+    <source media="(max-width: 990px)" srcset="https://via.placeholder.com/990x150">
+    <source media="(max-width: 470px)" srcset="https://via.placeholder.com/470x150">
+    <img src="https://via.placeholder.com/150x150" alt="placeholder">
+    </picture>
+    <h3>Reason</h3>
+    <p>
+      <ol>
+          <li>Es werden immer die passenden Grössen der Bilder im entsprechenden Viewport geladen -> Performance</li>
+          <li>Das Bild, welches für den entsprechenden Viewport definiert wurde / Fallback-Image wenn keine MQ definiert ist</li>
+      </ol>
+    </p>
+    <h2>Table</h2>
+    <table border="1">
+
+        <thead>
+            <tr>
+                <th>Row Header</th>
+                <th width="100px">Head Col 1</th>
+                <th width="200px">Head Col 2</th>
+                <th>Head Col 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Row Header</th>
+                <td width="200px;">Cell 1.1</td>
+                <td>Cell 1.2</td>
+                <td>Cell 1.3</td>
+            </tr>
+            <tr>
+                <th>Row Header</th>
+                <td rowspan="2">Cell 2.1</td>
+                <td>Cell 2.2</td>
+                <td rowspan="2">Cell 2.3</td>
+            </tr>
+            <tr>
+                <th>Row Header</th>
+                <td>Cell 3.2</td>
+                <td>Cell 3.3</td>
+            </tr>
+            <tr>
+                <th>Row Header</th>
+                <td colspan="3">Cell 4</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Row Header</th>
+                <td>Foot Col 1</td>
+                <td>Foot Col 2</td>
+                <td>Foot Col 3</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <h1>Form</h1>
+    <form action="" method="POST">
+        <label for="firstName">First Name</label>
+        <input id="firstName" type="text" name="firstName" placeholder="First Name" required maxlength="10" />
+        <br />
+        <label for="randomNumber">Random Number</label>
+        <input id="randomNumber" type="number" name="randomNumber" min="1" max="100" />
+        <br />
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password" minlength="8" maxLength="100" />
+        <br />
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" name="phone" />
+        <br />
+        <label for="url">URL</label>
+        <input id="url" type="url" name="url" />
+        <br />
+        <label for="mail">Mail</label>
+        <input id="mail" type="email" name="mail" />
+        <br />
+        <label for="search">Search</label>
+        <input id="search" type="search" name="serach" required />
+        <br />
+        <label for="localDateTime">Local Date Time</label>
+        <input id="localDateTime" type="datetime-local" name="localDateTime" required />
+        <br />
+        <label for="dateTime">Date Time</label>
+        <input id="dateTime" type="datetime" name="dateTime" required />
+        <br />
+        <label for="month">Month</label>
+        <input id="month" type="month" name="month" required />
+        <br />
+        <label for="week">Week</label>
+        <input id="week" type="week" name="week" required />
+        <br />
+        <label for="time">Time</label>
+        <input id="time" type="time" name="time" required />
+        <br />
+        <label for="date">Date</label>
+        <input id="date" type="date" name="date" required />
+        <br />
+        <label for="checkbox">Checkbox</label>
+        <input id="checkbox" type="checkbox" name="checkbox" required />
+        <br />
+        <label for="color">Color</label>
+        <input id="color" type="color" name="color" required />
+        <br />
+        <label for="file">File</label>
+        <input id="file" type="file" name="file" required />
+        <br />
+        <label for="hidden">hidden</label>
+        <input id="hidden" type="hidden" name="hidden" />
+        <br />
+        <label for="radio">Radio</label>
+        <input id="radio" type="radio" name="gender" value="1" />
+        <input id="radio1" type="radio" name="gender" value="1" />
+        <br />
+        <label for="range">Range</label>
+        <input id="range" type="range" name="range" />
+        <br />
+        <label for="combo">Combo</label>
+        <select id="combo" name="combo" size="1">
+            <optgroup label="Group 1">
+                <option selected value="1">Value 1</option>
+                <option value="2">Value 2</option>
+            </optgroup>
+            <optgroup label="Group 2">
+                <option value="3">Value 3</option>
+                <option value="4">Value 4</option>
+                <option value="5">Value 5</option>
+            </optgroup>
+        </select>
+        <br />
+        <label for="list">List</label>
+        <select id="list" name="list" size="5" multiple="true">
+            <option selected value="1">Value 1</option>
+            <option value="2">Value 2</option>
+            <option value="3">Value 3</option>
+            <option value="4">Value 4</option>
+            <option value="5">Value 5</option>
+        </select>
+        <br />
+        <label for="textarea">Textarea</label>
+        <textarea id="textarea" name="textarea" cols="50" rows="50" maxlength="20"></textarea>
+        <br />
+        <fieldset>
+            <legend>Personalia:</legend>
+            <button type="button">Button</button>
+            <button type="Menu">Menu</button>
+        </fieldset>
+        <button type="button">Button</button>
+        <button type="Menu">Menu</button>
+        <input id="reset" type="reset" name="reset" />
+        <input id="img" type="image" name="img" src="https://via.placeholder.com/150x150" alt="Send" />
+        <input type="submit" name="send" value="Send" />
+    </form>
+  </body>
 </html>
